@@ -1,4 +1,4 @@
-<main>
+<main class = "user_container">
 
     <header class = "header">
        <div class = "wrap">
@@ -9,8 +9,19 @@
        </div>
      </div>  
     </header>
+    <p class = "bio"> <span>Bio:</span> <br>  {{ details.bio || "dlkajdalkjfl naslknalkdjs calkfdnslkdfnslkja salknfslkjdfnlsknfslkfn" }} </p>
+    <p class = "bio"> <span>Company:</span> <br>  {{ details.company || "Company Name"  }} </p>
+    <p class = "bio"> <span>Followers:</span> <br>  {{ details.followers || 100  }} </p>
+    <p class = "bio"> <span>Repositories:</span> <br>  {{ details.public_repos || 10  }} </p>
     
-
+    <div class = "repo_container">
+    <div class = "repos" ng-repeat = "repo in repos">
+      <a href = "{{ repo.clone_url }}" target="blank">
+       <h2> <span> name: </span> {{repo.name}}<h2>
+       <p> <span> description: </span>  {{ repo.description.length > 80 ? repo.description.substring(0,60) : repo.description }}..... </p> 
+      </a> 
+    </div>
+  </div>
 </main>     
     <!-- <h1>
      

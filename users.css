@@ -10,7 +10,60 @@
 .header{
     width:100%;
     height:200px;
-    background-color: lightgray;
+
+}
+.user_container {
+    width:100%;
+}
+.repos a{
+   text-decoration: none;
+   color:black;
+   width:300px;
+}
+.bio {
+    font-size: x-large;
+    margin-left: 100px;
+    font-weight: 700;
+}
+.user_container > h2{
+    margin-left: 100px;
+    color:gray;
+}
+.repo_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+}
+.repos h2{
+    color:black;
+    margin-left:30px;
+    padding-top: 40px;
+    padding-right: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+.repos p{
+    color:black;
+    margin-top:-40px;
+    margin-right: 20px;
+    font-size: 18px;
+    padding-bottom: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.repos span{
+    color:gray;
+    font-size: 18px;
+}
+.repos{
+    margin-left:30px;
+    width:300px;
+    border-radius:10px;
+    box-shadow: 3px 3px 6px black;
+    margin:20px;
+}
+.bio span {
+    color:gray
 }
 .wrap{
     display: flex;
