@@ -34,7 +34,7 @@ app.config([
               $http.get(url)
                 .then(function (response) {
                   $rootScope.users = response.data.items;
-                    
+                  
                     $scope.cur_page++;
                 })
                 .catch(function (error) {
@@ -46,7 +46,7 @@ app.config([
               
                 const api_url = `https://api.github.com/search/users?q=${$scope.searchQuery.length === 0 ? "a" : $scope.searchQuery}&per_page=${per_page}&page=${$scope.cur_page}`
                 
-                if ( scrollTop +  clientHeight >= scrollHeight - 10) {
+                if ( scrollTop +  clientHeight > scrollHeight - 5) {
                     
                   $http.get(api_url)
                         .then(function (response) {
