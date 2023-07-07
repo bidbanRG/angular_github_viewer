@@ -34,7 +34,7 @@ app.config([
               $http.get(url)
                 .then(function (response) {
                   $rootScope.users = response.data.items;
-                    console.log($rootScope.users)
+                    
                     $scope.cur_page++;
                 })
                 .catch(function (error) {
@@ -52,7 +52,9 @@ app.config([
                         .then(function (response) {
                              $rootScope.users = [...$rootScope.users,...response.data.items];
                              $scope.cur_page++;
-                            console.log($rootScope.users)
+                            
+                            if(response.status == 403)
+                              alert("Rate Limit exceeded");
                       })
                        .catch(function (error) {
                     console.error('Error retrieving data:', error);
